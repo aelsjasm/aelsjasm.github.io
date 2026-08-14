@@ -1,80 +1,6 @@
 import Reveal from './components/Reveal.jsx'
 import Pipe from './components/Pipe.jsx'
-
-const EXPERIENCE = [
-  {
-    role: 'Prayer Committee Member',
-    org: 'Easter Service 2025',
-    date: 'Mar – May 2025',
-    bullets: ['Distributed fasting, air, and committee prayers', 'Conducted prayer walks'],
-  },
-  {
-    role: 'Executive Secretary',
-    org: 'Christmas Service 2024',
-    date: 'Dec 2024',
-    bullets: ['Prepared proposals, accountability reports, and official letters', 'Distributed meeting materials'],
-  },
-  {
-    role: 'Event Committee Member',
-    org: 'Christian Student Camp XXXVIII 2024',
-    date: 'Oct – Dec 2024',
-    bullets: ['Scheduled sessions and assisted in event flow'],
-  },
-  {
-    role: 'Treasurer',
-    org: 'Mentoring 2024',
-    date: 'Oct – Dec 2024',
-    bullets: ['Created budget breakdowns and approved funding for each division', 'Managed and tracked income and expenses'],
-  },
-  {
-    role: 'Executive Secretary',
-    org: 'New Student Welcome Service 2024',
-    date: 'Jul – Sep 2024',
-    bullets: ['Prepared proposals, accountability reports, and official letters', 'Distributed meeting materials'],
-  },
-  {
-    role: 'Event Committee Member',
-    org: 'Open Air Fellowship Service 2024',
-    date: 'May – Jun 2024',
-    bullets: ['Liaised with speakers and assisted in event flow management'],
-  },
-  {
-    role: 'Consumption & Health Committee Member',
-    org: 'Easter Service 2024',
-    date: 'Mar – Apr 2024',
-    bullets: ['Assisted in talent and interest development', 'Supported external and internal services'],
-  },
-  {
-    role: 'Commission 2 Member',
-    org: 'UKM KK Talita Kum',
-    date: 'Feb 2024 – Present',
-    bullets: ['Assisted in talent and interest development', 'Supported external and internal services'],
-  },
-  {
-    role: 'Payment Clerk',
-    org: 'PT Pos Indonesia',
-    date: 'Nov – Dec 2022',
-    bullets: ['Prepared and calculated finances before distribution', 'Conducted data verification and reported financial calculations to head office'],
-  },
-]
-
-const PROJECTS = [
-  {
-    year: '2024',
-    title: 'Aloe Vera Facial Cleanser Formulation',
-    desc: 'Formulated solid and liquid facial cleansers using aloe vera as the primary active ingredient, as part of a project-based learning program.',
-  },
-  {
-    year: '2023',
-    title: 'Local Microorganism Cultivation',
-    desc: 'Cultivated local microorganisms (MOL) from natural sources for a project-based learning program on applied bioprocessing.',
-  },
-]
-
-const HARD_SKILLS = ['Laboratory Equipment Handling', 'Safety & Sanitation Procedures', 'Quality Control', 'Aspen HYSYS', 'MATLAB', 'Visio', 'Canva', 'Microsoft Office']
-const SOFT_SKILLS = ['Time Management', 'Adaptability', 'Teamwork', 'Communication']
-
-const COURSES = ['Chemical Engineering Operations 3', 'Professional Ethics', 'Quality Management Systems', 'Occupational Health & Safety']
+import { useLanguage } from './i18n.jsx'
 
 function Bubbles() {
   const bubbles = [
@@ -93,19 +19,33 @@ function Bubbles() {
 }
 
 export default function App() {
+  const { lang, content, setLanguage } = useLanguage()
+  const toggleLang = () => setLanguage(lang === 'en' ? 'id' : 'en')
+
   return (
     <>
       <nav className="nav">
         <div className="nav-inner">
           <div className="nav-mark">⚗ <strong>ASPM</strong> / process-line</div>
-          <ul className="nav-links">
-            <li><a href="#about">01 Reactor</a></li>
-            <li><a href="#education">02 Tank</a></li>
-            <li><a href="#experience">03 Train</a></li>
-            <li><a href="#projects">04 Separator</a></li>
-            <li><a href="#skills">05 Valves</a></li>
-            <li><a href="#contact">06 Outlet</a></li>
-          </ul>
+          <div className="nav-right">
+            <ul className="nav-links">
+              <li><a href="#about">{content.nav.about}</a></li>
+              <li><a href="#education">{content.nav.education}</a></li>
+              <li><a href="#experience">{content.nav.experience}</a></li>
+              <li><a href="#projects">{content.nav.projects}</a></li>
+              <li><a href="#skills">{content.nav.skills}</a></li>
+              <li><a href="#contact">{content.nav.contact}</a></li>
+            </ul>
+            <button
+              type="button"
+              className="lang-toggle"
+              onClick={toggleLang}
+              aria-label={content.nav.langLabel}
+              title={content.nav.langLabel}
+            >
+              {content.oppositeCode}
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -113,22 +53,18 @@ export default function App() {
         {/* ================= HERO / FEED ================= */}
         <header className="hero" id="feed">
           <div>
-            <div className="hero-kicker">IN — 00 · FEED INLET <span>●</span> MALANG, JAWA TIMUR</div>
+            <div className="hero-kicker">{content.hero.kicker} <span>●</span> {content.hero.location}</div>
             <h1>Alicia Septiani<br />Putri <em>Melati</em></h1>
-            <p className="hero-role">
-              Third-year Chemical Engineering diploma student at Politeknik Negeri Malang, working across
-              process operations, quality management, and occupational health &amp; safety — with a track
-              record of coordinating people, budgets, and reports.
-            </p>
+            <p className="hero-role">{content.hero.role}</p>
             <div className="hero-cta">
-              <a className="btn btn-primary" href="#experience">View the process train ↓</a>
-              <a className="btn btn-ghost" href="mailto:aliciaseptiani00@gmail.com">Email me</a>
-              <a className="btn btn-ghost" href="https://www.linkedin.com/in/alicia-septiani-13b100371" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a className="btn btn-primary" href="#experience">{content.hero.ctaExperience}</a>
+              <a className="btn btn-ghost" href="mailto:aliciaseptiani00@gmail.com">{content.hero.ctaEmail}</a>
+              <a className="btn btn-ghost" href="https://www.linkedin.com/in/alicia-septiani-13b100371" target="_blank" rel="noreferrer">{content.hero.ctaLinkedin}</a>
             </div>
             <ul className="hero-meta">
-              <li>081335353781</li>
-              <li>aliciaseptiani00@gmail.com</li>
-              <li>GPA 3.48 / 4.00</li>
+              <li>{content.hero.metaPhone}</li>
+              <li>{content.hero.metaEmail}</li>
+              <li>{content.hero.metaGpa}</li>
             </ul>
           </div>
 
@@ -144,7 +80,7 @@ export default function App() {
                 <line x1="105" y1="20" x2="195" y2="20" stroke="var(--line-strong)" strokeWidth="3" strokeLinecap="round" />
               </svg>
               <div className="photo-mask">
-                <img src="./profile-placeholder.svg" alt="Profile placeholder — replace with Alicia's photo" />
+                <img src="./profile-placeholder.svg" alt={content.hero.photoAlt} />
                 <div className="liquid"><Bubbles /></div>
               </div>
             </div>
@@ -156,31 +92,27 @@ export default function App() {
 
         {/* ================= ABOUT / REACTOR ================= */}
         <Reveal as="section" id="about">
-          <div className="tag">R-01 · REACTOR — SUMMARY</div>
+          <div className="tag">{content.about.tag}</div>
           <div className="about-grid">
             <div className="about-copy">
-              <h2 className="section-title">What goes in, comes out refined.</h2>
+              <h2 className="section-title">
+                {content.about.title}</h2>
               <p>
-                Strong foundation in process operations, quality management, and occupational health and
-                safety, with skills in data handling, documentation, and cross-functional collaboration.
-                Experienced in project coordination, budget management, and report preparation through
-                organizational and volunteer roles. Highly adaptable and detail-oriented, eager to bring
-                analytical and organizational strength to operational efficiency and digital transformation
-                initiatives across industries.
+                {content.about.body}
               </p>
             </div>
             <div className="stat-rail">
               <div className="stat">
-                <div className="stat-value">3.48/4.00</div>
-                <div className="stat-label">Current GPA</div>
+                <div className="stat-value">{content.about.statGpaValue}</div>
+                <div className="stat-label">{content.about.statGpaLabel}</div>
               </div>
               <div className="stat">
-                <div className="stat-value">9</div>
-                <div className="stat-label">Org &amp; Volunteer Roles</div>
+                <div className="stat-value">{content.about.statRolesValue}</div>
+                <div className="stat-label">{content.about.statRolesLabel}</div>
               </div>
               <div className="stat">
-                <div className="stat-value">3rd Yr</div>
-                <div className="stat-label">Diploma in Progress</div>
+                <div className="stat-value">{content.about.statDiplomaValue}</div>
+                <div className="stat-label">{content.about.statDiplomaLabel}</div>
               </div>
             </div>
           </div>
@@ -190,20 +122,20 @@ export default function App() {
 
         {/* ================= EDUCATION / RETENTION TANK ================= */}
         <Reveal as="section" id="education">
-          <div className="tag">T-02 · RETENTION TANK — EDUCATION</div>
-          <h2 className="section-title">Where the fundamentals are held.</h2>
+          <div className="tag">{content.education.tag}</div>
+          <h2 className="section-title">{content.education.title}</h2>
           <div className="tank-card">
             <div className="tank-top">
-              <div className="tank-school">State Polytechnic of Malang</div>
-              <div className="tank-date">Aug 2023 — Present</div>
+              <div className="tank-school">{content.education.school}</div>
+              <div className="tank-date">{content.education.date}</div>
             </div>
-            <div className="tank-degree">Diploma in Chemical Engineering</div>
+            <div className="tank-degree">{content.education.degree}</div>
             <div className="gpa-gauge">
               <div className="gauge-track"><div className="gauge-fill" /></div>
-              <div className="gauge-num">3.48 / 4.00 GPA</div>
+              <div className="gauge-num">{content.education.gpa}</div>
             </div>
             <div className="course-tags">
-              {COURSES.map((c) => <span className="course-tag" key={c}>{c}</span>)}
+              {content.education.courses.map((c) => <span className="course-tag" key={c}>{c}</span>)}
             </div>
           </div>
         </Reveal>
@@ -212,14 +144,13 @@ export default function App() {
 
         {/* ================= EXPERIENCE / PROCESS TRAIN ================= */}
         <Reveal as="section" id="experience">
-          <div className="tag">P-03 · PROCESS TRAIN — EXPERIENCE</div>
-          <h2 className="section-title">A sequence of roles, run in order.</h2>
+          <div className="tag">{content.experience.tag}</div>
+          <h2 className="section-title">{content.experience.title}</h2>
           <p className="section-lede">
-            Volunteer and organizational experience across finance, event operations, and executive
-            secretarial work — mostly within campus ministry programs.
+            {content.experience.lede}
           </p>
           <div className="train">
-            {EXPERIENCE.map((item) => (
+            {content.experience.items.map((item) => (
               <div className="train-item" key={item.role + item.org}>
                 <span className="train-node" />
                 <div className="train-card">
@@ -243,10 +174,10 @@ export default function App() {
 
         {/* ================= PROJECTS / SEPARATOR ================= */}
         <Reveal as="section" id="projects">
-          <div className="tag">S-04 · SEPARATOR — PROJECTS</div>
-          <h2 className="section-title">Isolated, applied outputs.</h2>
+          <div className="tag">{content.projects.tag}</div>
+          <h2 className="section-title">{content.projects.title}</h2>
           <div className="sep-grid">
-            {PROJECTS.map((p, i) => (
+            {content.projects.items.map((p, i) => (
               <div className="sep-card" key={p.title}>
                 <span className="sep-year">{p.year}</span>
                 <div className="sep-index">STREAM-{String(i + 1).padStart(2, '0')}</div>
@@ -261,21 +192,21 @@ export default function App() {
 
         {/* ================= SKILLS / VALVE ARRAY ================= */}
         <Reveal as="section" id="skills">
-          <div className="tag">V-05 · VALVE ARRAY — SKILLS</div>
-          <h2 className="section-title">Controls on hand.</h2>
+          <div className="tag">{content.skills.tag}</div>
+          <h2 className="section-title">{content.skills.title}</h2>
           <div className="valve-groups">
             <div>
-              <div className="valve-group-title">Hard Skills</div>
+              <div className="valve-group-title">{content.skills.hardGroup}</div>
               <div className="valve-chips">
-                {HARD_SKILLS.map((s) => (
+                {content.skills.hardSkills.map((s) => (
                   <span className="chip" key={s}><span className="valve-ring" />{s}</span>
                 ))}
               </div>
             </div>
             <div>
-              <div className="valve-group-title">Soft Skills</div>
+              <div className="valve-group-title">{content.skills.softGroup}</div>
               <div className="valve-chips">
-                {SOFT_SKILLS.map((s) => (
+                {content.skills.softSkills.map((s) => (
                   <span className="chip" key={s}><span className="valve-ring" />{s}</span>
                 ))}
               </div>
@@ -287,11 +218,10 @@ export default function App() {
 
         {/* ================= CONTACT / OUTLET ================= */}
         <Reveal as="section" className="outlet" id="contact">
-          <div className="tag">OUT — 06 · OUTLET</div>
-          <h2>Let's work together.</h2>
+          <div className="tag">{content.contact.tag}</div>
+          <h2>{content.contact.title}</h2>
           <p>
-            Open to internship and entry-level opportunities in process operations, quality, HSE, or
-            digital transformation. Reach out any time.
+            {content.contact.body}
           </p>
           <div className="outlet-links">
             <a className="btn btn-primary" href="mailto:aliciaseptiani00@gmail.com">aliciaseptiani00@gmail.com</a>
@@ -302,7 +232,7 @@ export default function App() {
       </main>
 
       <footer>
-        ALICIA SEPTIANI PUTRI MELATI · MALANG, INDONESIA · BUILT WITH REACT
+        {content.footer}
       </footer>
     </>
   )
