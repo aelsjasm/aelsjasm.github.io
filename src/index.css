@@ -6,22 +6,22 @@
    coat cliché.
    ============================================================ */
 :root {
-  --bg-0: #0b1116;
-  --bg-1: #10181f;
-  --bg-2: #172230;
-  --bg-3: #1e2c3c;
-  --line: rgba(237, 239, 242, 0.09);
-  --line-strong: rgba(237, 239, 242, 0.18);
-  --ink: #edf1f4;
-  --ink-dim: #8fa0ac;
-  --ink-faint: #5c6b76;
+  --bg-0: #e2e3d7;
+  --bg-1: #edeee4;
+  --bg-2: #d4d5c6;
+  --bg-3: #c3c6b2;
+  --line: rgba(26, 18, 4, 0.12);
+  --line-strong: rgba(26, 18, 4, 0.22);
+  --ink: #251a08;
+  --ink-dim: #6b5a30;
+  --ink-faint: #8a784a;
 
-  --amber: #f2a93b;
-  --amber-dim: rgba(242, 169, 59, 0.15);
-  --teal: #48d1c5;
-  --teal-dim: rgba(72, 209, 197, 0.15);
-  --hazard: #e75a3c;
-  --hazard-dim: rgba(231, 90, 60, 0.16);
+  --amber: #b37714;
+  --amber-dim: rgba(179, 119, 20, 0.16);
+  --teal: #0d8578;
+  --teal-dim: rgba(13, 133, 120, 0.15);
+  --hazard: #cd3d1f;
+  --hazard-dim: rgba(205, 61, 31, 0.15);
 
   --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
   --font-body: 'Inter', 'Segoe UI', sans-serif;
@@ -39,15 +39,15 @@ body {
   margin: 0;
   background: var(--bg-0);
   background-image:
-    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(72, 209, 197, 0.07), transparent),
-    radial-gradient(ellipse 700px 500px at 100% 20%, rgba(242, 169, 59, 0.06), transparent);
+    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(13, 133, 120, 0.08), transparent),
+    radial-gradient(ellipse 700px 500px at 100% 20%, rgba(179, 119, 20, 0.09), transparent);
   color: var(--ink);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   line-height: 1.55;
 }
 
-::selection { background: var(--amber); color: #1a1204; }
+::selection { background: var(--amber); color: #fff8e6; }
 
 a { color: inherit; }
 h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; letter-spacing: -0.01em; }
@@ -165,7 +165,7 @@ section {
   top: 0; left: 0; right: 0;
   z-index: 40;
   backdrop-filter: blur(10px);
-  background: rgba(11, 17, 22, 0.72);
+  background: rgba(226, 227, 215, 0.78);
   border-bottom: 1px solid var(--line);
 }
 .nav-inner {
@@ -271,10 +271,10 @@ section {
 }
 .btn-primary {
   background: var(--amber);
-  color: #1a1204;
+  color: #241a04;
   font-weight: 600;
 }
-.btn-primary:hover { transform: translateY(-2px); background: #ffbe57; }
+.btn-primary:hover { transform: translateY(-2px); background: #c98a20; }
 .btn-ghost {
   border-color: var(--line-strong);
   color: var(--ink);
@@ -301,7 +301,7 @@ section {
 .vessel-glow {
   position: absolute;
   inset: -30px;
-  background: radial-gradient(circle, rgba(72, 209, 197, 0.16), transparent 70%);
+  background: radial-gradient(circle, rgba(13, 133, 120, 0.18), transparent 70%);
   filter: blur(4px);
 }
 .vessel {
@@ -335,7 +335,7 @@ section {
   position: absolute;
   left: 0; right: 0; bottom: 0;
   height: 42%;
-  background: linear-gradient(180deg, rgba(72, 209, 197, 0.5), rgba(72, 209, 197, 0.85));
+  background: linear-gradient(180deg, rgba(13, 133, 120, 0.55), rgba(13, 133, 120, 0.9));
   animation: liquid-sway 6s ease-in-out infinite;
   transform-origin: bottom;
 }
@@ -348,7 +348,7 @@ section {
   bottom: 10%;
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: rgba(237, 241, 244, 0.55);
+  background: rgba(26, 18, 4, 0.2);
   animation: rise 3.6s ease-in infinite;
 }
 @keyframes rise {
@@ -380,7 +380,7 @@ section {
 @media (max-width: 780px) { .about-grid { grid-template-columns: 1fr; } }
 .about-copy p {
   font-size: 16.5px;
-  color: #cfd7dc;
+  color: var(--ink-dim);
   max-width: 64ch;
 }
 .stat-rail {
