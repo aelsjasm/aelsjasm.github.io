@@ -80,11 +80,10 @@ export default function App() {
                 <line x1="105" y1="20" x2="195" y2="20" stroke="var(--line-strong)" strokeWidth="3" strokeLinecap="round" />
               </svg>
               <div className="photo-mask">
-                <img src="./profile-placeholder.svg" alt={content.hero.photoAlt} />
-                <div className="liquid"><Bubbles /></div>
+                <img src="./profile.jpg" alt={content.hero.photoAlt} />
+                {/* <div className="liquid"><Bubbles /></div> */}
               </div>
             </div>
-            <div className="photo-hint">// replace public/profile-placeholder.svg</div>
           </div>
         </header>
 
