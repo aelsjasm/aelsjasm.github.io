@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-export default function Reveal({ as: Tag = 'div', className = '', children, stagger = false, ...rest }) {
+export default function Reveal({ as: Tag = 'div', className = '', children, ...rest }) {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -15,13 +15,13 @@ export default function Reveal({ as: Tag = 'div', className = '', children, stag
           }
         })
       },
-      { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
     )
     observer.observe(el)
     return () => observer.disconnect()
   }, [])
 
-  const cls = `${stagger ? 'reveal-stagger' : 'reveal'} ${className}`.trim()
+  const cls = `reveal ${className}`.trim()
 
   return (
     <Tag ref={ref} className={cls} {...rest}>
