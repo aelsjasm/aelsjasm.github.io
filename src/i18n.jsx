@@ -237,8 +237,8 @@ const ID = {
   about: {
     kicker: 'Tentang Saya',
     title: 'Lulusan teknik kimia yang fokus pada keberlanjutan.',
-    body: 'Lulusan Teknik Kimia di Politeknik Negeri Malang (IPK 3,48/4,00) yang aktif dalam kegiatan organisasi dan proyek laboratorium. Memiliki ketertarikan pada pengolahan limbah, energi terbarukan, dan riset terapan, dengan fokus pada eksperimen dan pengembangan solusi berbasis sains untuk keberlanjutan industri. Berpengalaman dalam proyek produksi sabun berbahan lidah buaya. Mahir menggunakan MATLAB, Aspen HYSYS, dan Microsoft Office untuk analisis data dan simulasi proses. Terampil dalam pekerjaan laboratorium dengan pendekatan analitis, serta memiliki kemampuan komunikasi dan manajemen tim yang kuat.',
-    statGpaValue: '3,48/4,00',
+    body: 'Lulusan Teknik Kimia di Politeknik Negeri Malang (IPK 3,52/4,00) yang aktif dalam kegiatan organisasi dan proyek laboratorium. Memiliki ketertarikan pada pengolahan limbah, energi terbarukan, dan riset terapan, dengan fokus pada eksperimen dan pengembangan solusi berbasis sains untuk keberlanjutan industri. Berpengalaman dalam proyek produksi sabun berbahan lidah buaya. Mahir menggunakan MATLAB, Aspen HYSYS, dan Microsoft Office untuk analisis data dan simulasi proses. Terampil dalam pekerjaan laboratorium dengan pendekatan analitis, serta memiliki kemampuan komunikasi dan manajemen tim yang kuat.',
+    statGpaValue: '3,52/4,00',
     statGpaLabel: 'IPK Terakhir',
     statRolesValue: '10+',
     statRolesLabel: 'Peran Organisasi & Kerja',
