@@ -91,6 +91,7 @@ export default function App() {
               <li><span className="badge">{content.hero.metaGpa}</span></li>
               <li><span className="badge">{content.hero.metaLocation}</span></li>
               <li><span className="badge">{content.hero.metaSchool}</span></li>
+              <li><span className="badge">{content.hero.metaNetwork}</span></li>
             </ul>
           </div>
 

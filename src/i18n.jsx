@@ -7,10 +7,10 @@ const EN = {
   code: 'EN',
   oppositeCode: 'ID',
   langAttr: 'en',
-  siteTitle: 'Alicia Septiani Putri Melati — Chemical Engineering Student',
+  siteTitle: 'Alicia Septiani Putri Melati — Chemical Engineering Graduate',
 
   nav: {
-    brand: 'Alicia',
+    brand: 'aelsjasm.',
     home: 'Home',
     about: 'About',
     skills: 'Skills',
@@ -21,12 +21,13 @@ const EN = {
 
   hero: {
     name: 'Alicia Septiani Putri Melati',
-    role: 'Chemical Engineering Student',
-    desc: 'A chemical engineering student with a strong interest in waste treatment and renewable energy — experienced in lab work, process simulation, and campus organizations.',
-    cta: 'Say Hello',
+    role: 'Chemical Engineering Graduate',
+    desc: 'Chemical Engineering graduate with strong interest in waste treatment and renewable energy — experienced in production of Aloe vera-based soap, lab work, process simulation, and campus organizations.',
+    cta: 'Contact Me',
     metaGpa: 'GPA 3.48 / 4.00',
-    metaLocation: 'Malang, East Java',
+    metaLocation: 'Malang, East Java, Indonesia',
     metaSchool: 'Politeknik Negeri Malang',
+    metaNetwork: '158 followers · 153 connections',
     photoAlt: 'Portrait of Alicia Septiani Putri Melati',
     linkedinLabel: 'LinkedIn profile',
     emailLabel: 'Send email',
@@ -35,14 +36,14 @@ const EN = {
 
   about: {
     kicker: 'About Me',
-    title: 'Chemical engineering student focused on sustainability.',
-    body: 'Third-year Chemical Engineering student at Politeknik Negeri Malang (GPA 3.48/4.00) with a strong interest in waste treatment and renewable energy. Experienced in a project producing Aloe vera-based soap, and actively involved in campus organizations. Proficient in MATLAB, Aspen HYSYS, and Microsoft Office for data analysis and process simulation. Skilled in laboratory work with an analytical approach, and equipped with strong communication and team management abilities.',
+    title: 'Chemical engineering graduate focused on sustainability.',
+    body: 'Chemical Engineering graduate from Politeknik Negeri Malang (GPA 3.48/4.00) with strong interest in waste treatment and renewable energy. Experienced in a project involving the production of Aloe vera-based soap and actively involved in campus organizations. Proficient in MATLAB, Aspen HYSYS, and Microsoft Office for data analysis and process simulation. Skilled in laboratory work with an analytical approach, and equipped with strong communication and team management abilities.',
     statGpaValue: '3.48/4.00',
-    statGpaLabel: 'Current GPA',
+    statGpaLabel: 'Final GPA',
     statRolesValue: '10+',
     statRolesLabel: 'Org & Work Roles',
-    statYearValue: '3rd Yr',
-    statYearLabel: 'Diploma in Progress',
+    statYearValue: '2026',
+    statYearLabel: 'Diploma Graduate',
     focusTitle: 'Focus areas',
     focus: [
       { label: 'Waste treatment', desc: 'Applied interest from coursework and lab projects.' },
@@ -51,8 +52,8 @@ const EN = {
     ],
     educationTitle: 'Education',
     school: 'State Polytechnic of Malang',
-    date: 'Aug 2023 — Present',
-    degree: 'Diploma in Chemical Engineering',
+    date: '2023 — 2026',
+    degree: 'Diploma (D-III) in Chemical Engineering',
     gpa: '3.48 / 4.00 GPA',
     courses: [
       'Chemical Engineering Operations 3',
@@ -61,7 +62,7 @@ const EN = {
       'Occupational Health & Safety',
     ],
     experienceTitle: 'Experience',
-    experienceLede: 'Quality control, finance, event operations, and executive secretarial work.',
+    experienceLede: '2 years total experience — quality control, finance, event operations, and executive secretarial work.',
     items: [
       {
         role: 'Quality Control',
@@ -73,8 +74,8 @@ const EN = {
         ],
       },
       {
-        role: 'Payment Clerk',
-        org: 'PT Pos Indonesia',
+        role: 'Payment Specialist',
+        org: 'PT Pos Indonesia (Persero)',
         date: 'Nov – Dec 2022',
         bullets: [
           'Prepared and calculated finances before distribution',
@@ -84,7 +85,7 @@ const EN = {
       {
         role: 'Commission 2 Member',
         org: 'UKM KK Talita Kum',
-        date: 'Feb 2024 – Present',
+        date: 'Feb 2024 – Jan 2026',
         bullets: [
           'Assisted in talent and interest development',
           'Supported external and internal services',
@@ -92,7 +93,7 @@ const EN = {
       },
       {
         role: 'Executive Secretary',
-        org: 'Christmas Service 2024',
+        org: 'Christmas Service 2024 · UKM KK Talita Kum',
         date: 'Dec 2024',
         bullets: [
           'Prepared proposals, accountability reports, and official letters',
@@ -101,7 +102,7 @@ const EN = {
       },
       {
         role: 'Executive Secretary',
-        org: 'New Student Welcome Service 2024',
+        org: 'New Student Welcome Service 2024 · UKM KK Talita Kum',
         date: 'Jul – Sep 2024',
         bullets: [
           'Prepared proposals, accountability reports, and official letters',
@@ -109,7 +110,7 @@ const EN = {
         ],
       },
       {
-        role: 'Treasurer',
+        role: 'Executive Treasurer',
         org: 'Mentoring 2024',
         date: 'Oct – Dec 2024',
         bullets: [
@@ -147,19 +148,19 @@ const EN = {
   skills: {
     kicker: 'Skills',
     title: 'What I work with.',
-    lede: 'Laboratory practice, process simulation tools, and collaboration skills.',
+    lede: 'Laboratory practice, process simulation tools, and collaboration skills — as listed on LinkedIn.',
     groups: [
       {
         title: 'Laboratory & Quality',
-        items: ['Laboratory Equipment Handling', 'Safety & Sanitation Procedures', 'Quality Control'],
+        items: ['Laboratory Skills', 'Laboratory Work', 'Laboratory Equipment Handling', 'Safety & Sanitation Procedures', 'Quality Control', 'Quality Management'],
       },
       {
         title: 'Software & Analysis',
-        items: ['Aspen HYSYS', 'MATLAB', 'Microsoft Office', 'Visio', 'Canva', 'Data Analysis', 'Process Simulation'],
+        items: ['Aspen HYSYS', 'MATLAB', 'Microsoft Office', 'Office Software', 'Visio', 'Canva', 'Data Analysis', 'Data Analysis Process', 'Process Simulation'],
       },
       {
         title: 'Working Style',
-        items: ['Communication', 'Team Management', 'Time Management', 'Adaptability', 'Teamwork'],
+        items: ['Communication', 'Strong Communication', 'Team Management', 'Project Management', 'Analytical Approach', 'Time Management', 'Adaptability', 'Teamwork', 'Payment Processing'],
       },
     ],
   },
@@ -169,6 +170,12 @@ const EN = {
     title: 'Applied lab outputs.',
     lede: 'Project-based learning in formulation and bioprocessing.',
     items: [
+      {
+        year: '2026',
+        tag: 'Bioplastic',
+        title: 'Effect of Chitosan Ratio from Shrimp Shell Waste and Glycerol on the Characteristics of Bioplastic Film from Jicama Starch',
+        desc: 'Developed eco-friendly bioplastic from shrimp shell waste chitosan with jicama starch and glycerol, producing a film with 21.91 MPa tensile strength, 129% elongation, and 98.11% biodegradability in 10 days as an alternative to conventional plastic.',
+      },
       {
         year: '2024',
         tag: 'Formulation',
@@ -200,10 +207,10 @@ const ID = {
   code: 'ID',
   oppositeCode: 'EN',
   langAttr: 'id',
-  siteTitle: 'Alicia Septiani Putri Melati — Mahasiswa Teknik Kimia',
+  siteTitle: 'Alicia Septiani Putri Melati — Lulusan Teknik Kimia',
 
   nav: {
-    brand: 'Alicia',
+    brand: 'aelsjasm.',
     home: 'Beranda',
     about: 'Tentang',
     skills: 'Keahlian',
@@ -214,12 +221,13 @@ const ID = {
 
   hero: {
     name: 'Alicia Septiani Putri Melati',
-    role: 'Mahasiswa Teknik Kimia',
-    desc: 'Mahasiswa teknik kimia dengan minat kuat pada pengolahan limbah dan energi terbarukan — berpengalaman dalam pekerjaan laboratorium, simulasi proses, dan organisasi kampus.',
-    cta: 'Sapa Saya',
+    role: 'Lulusan Teknik Kimia',
+    desc: 'Lulusan Teknik Kimia dengan minat kuat pada pengolahan limbah dan energi terbarukan — berpengalaman dalam produksi sabun berbahan lidah buaya, pekerjaan laboratorium, simulasi proses, dan organisasi kampus.',
+    cta: 'Hubungi Saya',
     metaGpa: 'IPK 3.48 / 4.00',
-    metaLocation: 'Malang, Jawa Timur',
+    metaLocation: 'Malang, Jawa Timur, Indonesia',
     metaSchool: 'Politeknik Negeri Malang',
+    metaNetwork: '158 pengikut · 153 koneksi',
     photoAlt: 'Foto Alicia Septiani Putri Melati',
     linkedinLabel: 'Profil LinkedIn',
     emailLabel: 'Kirim email',
@@ -228,14 +236,14 @@ const ID = {
 
   about: {
     kicker: 'Tentang Saya',
-    title: 'Mahasiswa teknik kimia yang fokus pada keberlanjutan.',
-    body: 'Mahasiswa tahun ketiga Teknik Kimia di Politeknik Negeri Malang (IPK 3,48/4,00) dengan minat kuat pada pengolahan limbah dan energi terbarukan. Berpengalaman dalam proyek produksi sabun berbahan lidah buaya, dan aktif dalam organisasi kampus. Mahir menggunakan MATLAB, Aspen HYSYS, dan Microsoft Office untuk analisis data dan simulasi proses. Terampil dalam pekerjaan laboratorium dengan pendekatan analitis, serta memiliki kemampuan komunikasi dan manajemen tim yang kuat.',
+    title: 'Lulusan teknik kimia yang fokus pada keberlanjutan.',
+    body: 'Lulusan Teknik Kimia di Politeknik Negeri Malang (IPK 3,48/4,00) yang aktif dalam kegiatan organisasi dan proyek laboratorium. Memiliki ketertarikan pada pengolahan limbah, energi terbarukan, dan riset terapan, dengan fokus pada eksperimen dan pengembangan solusi berbasis sains untuk keberlanjutan industri. Berpengalaman dalam proyek produksi sabun berbahan lidah buaya. Mahir menggunakan MATLAB, Aspen HYSYS, dan Microsoft Office untuk analisis data dan simulasi proses. Terampil dalam pekerjaan laboratorium dengan pendekatan analitis, serta memiliki kemampuan komunikasi dan manajemen tim yang kuat.',
     statGpaValue: '3,48/4,00',
-    statGpaLabel: 'IPK Saat Ini',
+    statGpaLabel: 'IPK Terakhir',
     statRolesValue: '10+',
     statRolesLabel: 'Peran Organisasi & Kerja',
-    statYearValue: 'Thn ke-3',
-    statYearLabel: 'Diploma Berlangsung',
+    statYearValue: '2026',
+    statYearLabel: 'Lulusan Diploma',
     focusTitle: 'Fokus bidang',
     focus: [
       { label: 'Pengolahan limbah', desc: 'Minat terapan dari kuliah dan proyek laboratorium.' },
@@ -244,8 +252,8 @@ const ID = {
     ],
     educationTitle: 'Pendidikan',
     school: 'Politeknik Negeri Malang',
-    date: 'Agu 2023 — Sekarang',
-    degree: 'Diploma Tiga Teknik Kimia',
+    date: '2023 — 2026',
+    degree: 'Diploma Tiga (D-III) Teknik Kimia',
     gpa: 'IPK 3.48 / 4.00',
     courses: [
       'Operasi Teknik Kimia 3',
@@ -254,7 +262,7 @@ const ID = {
       'Kesehatan & Keselamatan Kerja',
     ],
     experienceTitle: 'Pengalaman',
-    experienceLede: 'Pengendalian mutu, keuangan, operasional acara, dan kerja sekretaris eksekutif.',
+    experienceLede: 'Total 2 tahun pengalaman — pengendalian mutu, keuangan, operasional acara, dan kerja sekretaris eksekutif.',
     items: [
       {
         role: 'Pengendali Mutu',
@@ -266,8 +274,8 @@ const ID = {
         ],
       },
       {
-        role: 'Petugas Pembayaran',
-        org: 'PT Pos Indonesia',
+        role: 'Payment Specialist',
+        org: 'PT Pos Indonesia (Persero)',
         date: 'Nov – Des 2022',
         bullets: [
           'Menyiapkan dan menghitung keuangan sebelum pendistribusian',
@@ -277,15 +285,15 @@ const ID = {
       {
         role: 'Anggota Komisi 2',
         org: 'UKM KK Talita Kum',
-        date: 'Feb 2024 — Sekarang',
+        date: 'Feb 2024 — Jan 2026',
         bullets: [
           'Mendukung pengembangan bakat dan minat',
           'Mendukung pelayanan eksternal dan internal',
         ],
       },
       {
-        role: 'Sekretaris Eksekutif',
-        org: 'Kebaktian Natal 2024',
+        role: 'Sekretaris Pelaksana',
+        org: 'Ibadah Natal 2024 · UKM KK Talita Kum',
         date: 'Des 2024',
         bullets: [
           'Menyiapkan proposal, laporan pertanggungjawaban, dan surat resmi',
@@ -293,8 +301,8 @@ const ID = {
         ],
       },
       {
-        role: 'Sekretaris Eksekutif',
-        org: 'Penyambutan Mahasiswa Baru 2024',
+        role: 'Sekretaris Pelaksana',
+        org: 'Penyambutan Mahasiswa Baru 2024 · UKM KK Talita Kum',
         date: 'Jul – Sep 2024',
         bullets: [
           'Menyiapkan proposal, laporan pertanggungjawaban, dan surat resmi',
@@ -302,8 +310,8 @@ const ID = {
         ],
       },
       {
-        role: 'Bendahara',
-        org: 'Pendampingan 2024',
+        role: 'Bendahara Pelaksana',
+        org: 'Mentoring 2024',
         date: 'Okt – Des 2024',
         bullets: [
           'Membuat rincian anggaran dan menyetujui pendanaan tiap divisi',
@@ -311,26 +319,26 @@ const ID = {
         ],
       },
       {
-        role: 'Anggota Panitia Acara',
-        org: 'Kemah Pemuda Kristen XXXVIII 2024',
+        role: 'Anggota Sie Acara',
+        org: 'Camp Mahasiswa Kristen XXXVIII 2024',
         date: 'Okt – Des 2024',
         bullets: ['Menyusun jadwal sesi dan membantu kelancaran acara'],
       },
       {
-        role: 'Anggota Panitia Doa',
-        org: 'Kebaktian Paskah 2025',
+        role: 'Anggota Sie Doa',
+        org: 'Ibadah Paskah 2025',
         date: 'Mar – Mei 2025',
         bullets: ['Membagikan doa puasa dan doa panitia', 'Melaksanakan doa keliling'],
       },
       {
-        role: 'Anggota Panitia Acara',
-        org: 'Persekutuan Terbuka 2024',
+        role: 'Anggota Sie Acara',
+        org: 'Persekutuan Udara Terbuka 2024',
         date: 'Mei – Jun 2024',
         bullets: ['Berkoordinasi dengan pembicara dan membantu kelancaran acara'],
       },
       {
-        role: 'Anggota Konsumsi & Kesehatan',
-        org: 'Kebaktian Paskah 2024',
+        role: 'Anggota Sie Konsumsi & Kesehatan',
+        org: 'Ibadah Paskah 2024',
         date: 'Mar – Apr 2024',
         bullets: ['Mendukung logistik acara dan layanan anggota'],
       },
@@ -340,19 +348,19 @@ const ID = {
   skills: {
     kicker: 'Keahlian',
     title: 'Yang saya gunakan.',
-    lede: 'Praktik laboratorium, perangkat simulasi proses, dan keterampilan kolaborasi.',
+    lede: 'Praktik laboratorium, perangkat simulasi proses, dan keterampilan kolaborasi — sesuai daftar LinkedIn.',
     groups: [
       {
         title: 'Laboratorium & Mutu',
-        items: ['Penanganan Peralatan Laboratorium', 'Prosedur Keselamatan & Sanitasi', 'Pengendalian Mutu'],
+        items: ['Keterampilan Laboratorium', 'Pekerjaan Laboratorium', 'Penanganan Peralatan Laboratorium', 'Prosedur Keselamatan & Sanitasi', 'Pengendalian Mutu', 'Manajemen Mutu'],
       },
       {
         title: 'Perangkat & Analisis',
-        items: ['Aspen HYSYS', 'MATLAB', 'Microsoft Office', 'Visio', 'Canva', 'Analisis Data', 'Simulasi Proses'],
+        items: ['Aspen HYSYS', 'MATLAB', 'Microsoft Office', 'Perangkat Lunak Office', 'Visio', 'Canva', 'Analisis Data', 'Proses Analisis Data', 'Simulasi Proses'],
       },
       {
         title: 'Cara Kerja',
-        items: ['Komunikasi', 'Manajemen Tim', 'Manajemen Waktu', 'Adaptabilitas', 'Kerja Sama Tim'],
+        items: ['Komunikasi', 'Komunikasi Kuat', 'Manajemen Tim', 'Manajemen Proyek', 'Pendekatan Analitis', 'Manajemen Waktu', 'Adaptabilitas', 'Kerja Sama Tim', 'Pemrosesan Pembayaran'],
       },
     ],
   },
@@ -362,6 +370,12 @@ const ID = {
     title: 'Hasil laboratorium terapan.',
     lede: 'Pembelajaran berbasis proyek dalam formulasi dan bioproses.',
     items: [
+      {
+        year: '2026',
+        tag: 'Bioplastik',
+        title: 'Pengaruh Rasio Kitosan Dari Limbah Kulit Udang dan Gliserol Terhadap Karakteristik Film Biopplastik Dari Pati Bengkoang',
+        desc: 'Pengembangan bioplastik ramah lingkungan dari kitosan limbah kulit udang dengan pati bengkoang dan gliserol, menghasilkan film dengan kuat tarik 21,91 MPa, elongasi 129%, dan biodegradabilitas 98,11% dalam 10 hari sebagai alternatif plastik konvensional.',
+      },
       {
         year: '2024',
         tag: 'Formulasi',
