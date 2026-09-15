@@ -65,24 +65,6 @@ const EN = {
     experienceLede: '2 years total experience — quality control, finance, event operations, and executive secretarial work.',
     items: [
       {
-        role: 'Quality Control',
-        org: 'PT SMART Tbk',
-        date: '2024 — 2025',
-        bullets: [
-          'Performed quality checks supporting production standards',
-          'Documented findings and collaborated with operations',
-        ],
-      },
-      {
-        role: 'Payment Specialist',
-        org: 'PT Pos Indonesia (Persero)',
-        date: 'Nov – Dec 2022',
-        bullets: [
-          'Prepared and calculated finances before distribution',
-          'Conducted data verification and reported calculations to head office',
-        ],
-      },
-      {
         role: 'Commission 2 Member',
         org: 'UKM KK Talita Kum',
         date: 'Feb 2024 – Jan 2026',
@@ -92,18 +74,24 @@ const EN = {
         ],
       },
       {
-        role: 'Executive Secretary',
-        org: 'Christmas Service 2024 · UKM KK Talita Kum',
-        date: 'Dec 2024',
+        role: 'Quality Control',
+        org: 'PT SMART Tbk',
+        date: 'Sep — Dec 2025',
         bullets: [
-          'Prepared proposals, accountability reports, and official letters',
-          'Distributed meeting materials',
+          'Performed quality checks supporting production standards',
+          'Documented findings and collaborated with operations',
         ],
       },
       {
+        role: 'Prayer Committee Member',
+        org: 'Easter Service 2025',
+        date: 'Mar – May 2025',
+        bullets: ['Distributed fasting and committee prayers', 'Conducted prayer walks'],
+      },
+      {
         role: 'Executive Secretary',
-        org: 'New Student Welcome Service 2024 · UKM KK Talita Kum',
-        date: 'Jul – Sep 2024',
+        org: 'Christmas Service 2024 · UKM KK Talita Kum',
+        date: 'Dec 2024',
         bullets: [
           'Prepared proposals, accountability reports, and official letters',
           'Distributed meeting materials',
@@ -125,10 +113,13 @@ const EN = {
         bullets: ['Scheduled sessions and assisted in event flow'],
       },
       {
-        role: 'Prayer Committee Member',
-        org: 'Easter Service 2025',
-        date: 'Mar – May 2025',
-        bullets: ['Distributed fasting and committee prayers', 'Conducted prayer walks'],
+        role: 'Executive Secretary',
+        org: 'New Student Welcome Service 2024 · UKM KK Talita Kum',
+        date: 'Jul – Sep 2024',
+        bullets: [
+          'Prepared proposals, accountability reports, and official letters',
+          'Distributed meeting materials',
+        ],
       },
       {
         role: 'Event Committee Member',
@@ -141,6 +132,15 @@ const EN = {
         org: 'Easter Service 2024',
         date: 'Mar – Apr 2024',
         bullets: ['Supported event logistics and member services'],
+      },
+      {
+        role: 'Payment Specialist',
+        org: 'PT Pos Indonesia (Persero)',
+        date: 'Nov – Dec 2022',
+        bullets: [
+          'Prepared and calculated finances before distribution',
+          'Conducted data verification and reported calculations to head office',
+        ],
       },
     ],
   },
@@ -265,24 +265,6 @@ const ID = {
     experienceLede: 'Total 2 tahun pengalaman — pengendalian mutu, keuangan, operasional acara, dan kerja sekretaris eksekutif.',
     items: [
       {
-        role: 'Pengendali Mutu',
-        org: 'PT SMART Tbk',
-        date: '2024 — 2025',
-        bullets: [
-          'Melakukan pemeriksaan mutu untuk mendukung standar produksi',
-          'Mendokumentasikan temuan dan berkolaborasi dengan operasional',
-        ],
-      },
-      {
-        role: 'Payment Specialist',
-        org: 'PT Pos Indonesia (Persero)',
-        date: 'Nov – Des 2022',
-        bullets: [
-          'Menyiapkan dan menghitung keuangan sebelum pendistribusian',
-          'Melakukan verifikasi data dan melaporkan perhitungan ke kantor pusat',
-        ],
-      },
-      {
         role: 'Anggota Komisi 2',
         org: 'UKM KK Talita Kum',
         date: 'Feb 2024 — Jan 2026',
@@ -292,18 +274,24 @@ const ID = {
         ],
       },
       {
-        role: 'Sekretaris Pelaksana',
-        org: 'Ibadah Natal 2024 · UKM KK Talita Kum',
-        date: 'Des 2024',
+        role: 'Pengendali Mutu',
+        org: 'PT SMART Tbk',
+        date: 'Sep — Des 2025',
         bullets: [
-          'Menyiapkan proposal, laporan pertanggungjawaban, dan surat resmi',
-          'Mendistribusikan materi rapat',
+          'Melakukan pemeriksaan mutu untuk mendukung standar produksi',
+          'Mendokumentasikan temuan dan berkolaborasi dengan operasional',
         ],
       },
       {
+        role: 'Anggota Sie Doa',
+        org: 'Ibadah Paskah 2025',
+        date: 'Mar – Mei 2025',
+        bullets: ['Membagikan doa puasa dan doa panitia', 'Melaksanakan doa keliling'],
+      },
+      {
         role: 'Sekretaris Pelaksana',
-        org: 'Penyambutan Mahasiswa Baru 2024 · UKM KK Talita Kum',
-        date: 'Jul – Sep 2024',
+        org: 'Ibadah Natal 2024 · UKM KK Talita Kum',
+        date: 'Des 2024',
         bullets: [
           'Menyiapkan proposal, laporan pertanggungjawaban, dan surat resmi',
           'Mendistribusikan materi rapat',
@@ -325,10 +313,13 @@ const ID = {
         bullets: ['Menyusun jadwal sesi dan membantu kelancaran acara'],
       },
       {
-        role: 'Anggota Sie Doa',
-        org: 'Ibadah Paskah 2025',
-        date: 'Mar – Mei 2025',
-        bullets: ['Membagikan doa puasa dan doa panitia', 'Melaksanakan doa keliling'],
+        role: 'Sekretaris Pelaksana',
+        org: 'Penyambutan Mahasiswa Baru 2024 · UKM KK Talita Kum',
+        date: 'Jul – Sep 2024',
+        bullets: [
+          'Menyiapkan proposal, laporan pertanggungjawaban, dan surat resmi',
+          'Mendistribusikan materi rapat',
+        ],
       },
       {
         role: 'Anggota Sie Acara',
@@ -341,6 +332,15 @@ const ID = {
         org: 'Ibadah Paskah 2024',
         date: 'Mar – Apr 2024',
         bullets: ['Mendukung logistik acara dan layanan anggota'],
+      },
+      {
+        role: 'Payment Specialist',
+        org: 'PT Pos Indonesia (Persero)',
+        date: 'Nov – Des 2022',
+        bullets: [
+          'Menyiapkan dan menghitung keuangan sebelum pendistribusian',
+          'Melakukan verifikasi data dan melaporkan perhitungan ke kantor pusat',
+        ],
       },
     ],
   },
