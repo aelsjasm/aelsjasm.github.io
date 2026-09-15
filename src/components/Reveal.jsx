@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-export default function Reveal({ as: Tag = 'div', className = '', children, ...rest }) {
+export default function Reveal({ as: Tag = 'div', className = '', delay = 0, variant = 'up', children, style, ...rest }) {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -21,10 +21,11 @@ export default function Reveal({ as: Tag = 'div', className = '', children, ...r
     return () => observer.disconnect()
   }, [])
 
-  const cls = `reveal ${className}`.trim()
+  const cls = `reveal reveal-${variant} ${className}`.trim()
+  const mergedStyle = delay ? { ...style, transitionDelay: `${delay}ms` } : style
 
   return (
-    <Tag ref={ref} className={cls} {...rest}>
+    <Tag ref={ref} className={cls} style={mergedStyle} {...rest}>
       {children}
     </Tag>
   )

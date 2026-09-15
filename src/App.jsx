@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import Reveal from './components/Reveal.jsx'
 import { useLanguage } from './i18n.jsx'
 
@@ -35,12 +36,42 @@ function SendIcon() {
   )
 }
 
+function ScrollProgress() {
+  const ref = useRef(null)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    let raf = 0
+    const update = () => {
+      raf = 0
+      const max = document.documentElement.scrollHeight - window.innerHeight
+      const ratio = max > 0 ? Math.min(1, window.scrollY / max) : 0
+      el.style.transform = `scaleX(${ratio})`
+    }
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update)
+    }
+    update()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+      if (raf) cancelAnimationFrame(raf)
+    }
+  }, [])
+
+  return <div ref={ref} className="scroll-progress" aria-hidden="true" />
+}
+
 export default function App() {
   const { lang, content, setLanguage } = useLanguage()
   const toggleLang = () => setLanguage(lang === 'en' ? 'id' : 'en')
 
   return (
     <>
+      <ScrollProgress />
       <nav className="nav">
         <div className="nav-inner">
           <a className="nav-brand" href="#home">{content.nav.brand}</a>
@@ -66,7 +97,7 @@ export default function App() {
       <main className="wrap">
         {/* ============ HOME / HERO ============ */}
         <header className="hero" id="home">
-          <div className="social-rail">
+          <div className="social-rail anim-load anim-pop d1">
             <a href="https://www.linkedin.com/in/alicia-septiani-13b100371" target="_blank" rel="noreferrer" aria-label={content.hero.linkedinLabel}>
               <LinkedInIcon />
             </a>
@@ -79,10 +110,10 @@ export default function App() {
           </div>
 
           <div>
-            <h1 className="hero-name">{content.hero.name}</h1>
-            <div className="hero-role">{content.hero.role}</div>
-            <p className="hero-desc">{content.hero.desc}</p>
-            <div className="hero-cta">
+            <h1 className="hero-name anim-load">{content.hero.name}</h1>
+            <div className="hero-role anim-load d1">{content.hero.role}</div>
+            <p className="hero-desc anim-load d2">{content.hero.desc}</p>
+            <div className="hero-cta anim-load d3">
               <a className="btn btn-primary" href="mailto:aliciaseptiani00@gmail.com">
                 {content.hero.cta} <SendIcon />
               </a>
@@ -95,7 +126,7 @@ export default function App() {
             </ul>
           </div>
 
-          <div className="hero-photo-frame">
+          <div className="hero-photo-frame anim-load anim-fade d2">
             <img src="./profile.jpg" alt={content.hero.photoAlt} />
           </div>
         </header>
@@ -103,35 +134,35 @@ export default function App() {
         {/* ============ ABOUT ============ */}
         <Reveal as="section" className="section" id="about">
           <div className="section-head">
-            <div className="section-kicker">{content.about.kicker}</div>
+            <div className="section-kicker anim-load">{content.about.kicker}</div>
             <h2 className="section-title">{content.about.title}</h2>
           </div>
           <div className="about-grid">
             <div>
               <p className="about-copy">{content.about.body}</p>
               <div className="stat-grid">
-                <div className="stat-card">
+                <Reveal className="stat-card" delay={0} variant="scale">
                   <div className="stat-value">{content.about.statGpaValue}</div>
                   <div className="stat-label">{content.about.statGpaLabel}</div>
-                </div>
-                <div className="stat-card">
+                </Reveal>
+                <Reveal className="stat-card" delay={80} variant="scale">
                   <div className="stat-value">{content.about.statRolesValue}</div>
                   <div className="stat-label">{content.about.statRolesLabel}</div>
-                </div>
-                <div className="stat-card">
+                </Reveal>
+                <Reveal className="stat-card" delay={160} variant="scale">
                   <div className="stat-value">{content.about.statYearValue}</div>
                   <div className="stat-label">{content.about.statYearLabel}</div>
-                </div>
+                </Reveal>
               </div>
             </div>
-            <div className="card">
+            <Reveal className="card" delay={120} variant="right">
               <div className="skill-group-title">{content.about.focusTitle}</div>
               <ul className="focus-list" style={{ margin: 0 }}>
-                {content.about.focus.map((f) => (
-                  <li key={f.label}><span>{f.label}</span>{f.desc}</li>
+                {content.about.focus.map((f, i) => (
+                  <Reveal as="li" key={f.label} delay={i * 80} variant="right"><span>{f.label}</span>{f.desc}</Reveal>
                 ))}
               </ul>
-            </div>
+            </Reveal>
           </div>
         </Reveal>
 
@@ -158,8 +189,8 @@ export default function App() {
             <p className="section-lede">{content.about.experienceLede}</p>
           </div>
           <div className="timeline" style={{ marginTop: 16 }}>
-            {content.about.items.map((item) => (
-              <div className="timeline-item" key={item.role + item.org}>
+            {content.about.items.map((item, i) => (
+              <Reveal className="timeline-item" key={item.role + item.org} delay={Math.min(i * 60, 300)} variant="left">
                 <div>
                   <div className="timeline-role">{item.role}</div>
                   <div className="timeline-org">{item.org}</div>
@@ -168,7 +199,7 @@ export default function App() {
                 <ul className="timeline-bullets">
                   {item.bullets.map((b) => <li key={b}>{b}</li>)}
                 </ul>
-              </div>
+              </Reveal>
             ))}
           </div>
         </Reveal>
@@ -181,13 +212,13 @@ export default function App() {
             <p className="section-lede">{content.skills.lede}</p>
           </div>
           <div className="skills-grid">
-            {content.skills.groups.map((g) => (
-              <div className="card" key={g.title}>
+            {content.skills.groups.map((g, i) => (
+              <Reveal className="card" key={g.title} delay={i * 100} variant="scale">
                 <div className="skill-group-title">{g.title}</div>
                 <div className="chip-row">
                   {g.items.map((s) => <span className="badge" key={s}>{s}</span>)}
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </Reveal>
@@ -200,21 +231,21 @@ export default function App() {
             <p className="section-lede">{content.projects.lede}</p>
           </div>
           <div className="projects-grid">
-            {content.projects.items.map((p) => (
-              <div className="card" key={p.title}>
+            {content.projects.items.map((p, i) => (
+              <Reveal className="card" key={p.title} delay={(i % 2) * 100} variant={i % 2 === 0 ? 'left' : 'right'}>
                 <div className="project-meta">
                   <span className="badge">{p.year}</span>
                   <span className="badge">{p.tag}</span>
                 </div>
                 <div className="project-title">{p.title}</div>
                 <div className="project-desc">{p.desc}</div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </Reveal>
 
         {/* ============ CONTACT ============ */}
-        <Reveal as="section" className="section" id="contact">
+        <Reveal as="section" className="section" id="contact" variant="scale">
           <div className="contact-box">
             <div className="section-kicker">{content.contact.kicker}</div>
             <h2 className="section-title">{content.contact.title}</h2>
